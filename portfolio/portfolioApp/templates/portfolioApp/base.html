@@ -31,12 +31,12 @@
         <!--Column 2 of 3-->
         <div class="right-menu-nav-items">
             <div class="right-menu-nav-items-home">
-                <a href="#">
+                <a href="{% url 'portfolio:home' %}">
                     <img src="{% static 'portfolioApp/images/sidebar-nav/home.png' %}" class="side-menu-icons">
                 </a>
             </div>
             <div class="right-menu-nav-items-about">
-                <a href="#">
+                <a href="{% url 'portfolio:about' %}">
                     <img src="{% static 'portfolioApp/images/sidebar-nav/about.png' %}" class="side-menu-icons">
                 </a>
             </div>

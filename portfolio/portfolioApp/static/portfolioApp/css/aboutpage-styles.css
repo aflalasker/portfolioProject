@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Segoe UI";
+}
+
+.column-2.main-content {
+    display: flex;
+    grid-template-rows: none;
+    text-align: left;
+    padding-top: 10rem;
+    font-size: 1.3rem;
+    font-family: "Segoe UI";
+    word-break: break-all;
+
+
+}
+
+.head-text {
+    max-width: 50rem;
+    padding-left: 16rem;
+}
+
+.head-text > .large-text {
+    margin-bottom: 0;
+    padding-bottom: 4rem;
+    font-style: italic;
+}
+
+.head-text > .accent-text {
+    font-weight: 500;
+    font-size: 1.15rem;
+    line-height: 2.2rem;
+    margin-top: 0;
+    text-align: left;
+}
+
+.right-menu-nav-items {
+        padding-top: 0.5rem;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.column-1.side-menu > .right-menu-logo {
+    padding-bottom: 162px;
+}
+

@@ -13,3 +13,10 @@ def index(request):
     return render(request, 'portfolioApp/index.html', context)
 
 
+def about(request):
+    user = User.objects.all()
+
+    context = {'user': user}
+
+    return render(request, 'portfolioApp/about.html', context)
+
