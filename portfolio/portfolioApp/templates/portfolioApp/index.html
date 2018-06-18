@@ -1,14 +1,11 @@
+{% extends 'portfolioApp/base.html' %}
 {% load static %}
-<html>
-    <head>
-        <title>Index Page</title>
-    </head>
 
-    <body>
-        <div>
+    {% block title %}
+
+    {% endblock title %}
+            {% block body %}
             {% for user in user %}
                 <h3>{{user.email}}</h3>
             {% endfor %}
-        </div>
-    </body>
-</html>
+            {% endblock body %}
