@@ -7,31 +7,86 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'portfolioApp/base-styles.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/base-styles.css' %}" type="text/css">
+
+    {% block header %}
+    {# Space to insert any page specific styles or other content #}
+    {% endblock header %}
+
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
 <!--Parent container holds all the elements in the page-->
-    <div class="parentContainer">
+<div class="parentContainer">
 
+    <!--Header section for LOGO-->
+    <!--Column 1 of 3-->
+    <div class="column-1 side-menu">
+        <div class="right-menu-logo">
+            <img src="{% static 'portfolioApp/images/logo_image.png'%}">
+        </div>
+
+        <!--Main section for nav items-->
         <!--Navigation items for the side-bar-menu-->
-        <div class="column-1 side-menu">
-
+        <!--Column 2 of 3-->
+        <div class="right-menu-nav-items">
+            <div class="right-menu-nav-items-home">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/home.png' %}" class="side-menu-icons">
+                </a>
+            </div>
+            <div class="right-menu-nav-items-about">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/about.png' %}" class="side-menu-icons">
+                </a>
+            </div>
+            <div class="right-menu-nav-items-skills">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/skills.png' %}" class="side-menu-icons">
+                </a>
+            </div>
+            <div class="right-menu-nav-items-portfolio">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/portfolio.png' %}" class="side-menu-icons">
+                </a>
+            </div>
+            <div class="right-menu-nav-items-blog">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/blog.png' %}" class="side-menu-icons">
+                </a>
+            </div>
+            <div class="right-menu-nav-items-contact">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/contact.png' %}" class="side-menu-icons">
+                </a>
+            </div>
         </div>
 
-        <div class="column-2 main-content">
-            {# Page content goes in between the block body tags #}
-            {% block body %}
-
-            {% endblock body %}
-        </div>
-
-        <div class="column-3 optional-right-menu">
-            {# Optional menu items goes in between the optionalRightMenu tags #}
-            {% block optionalRightMenu %}
-
-            {% endblock optionalRightMenu %}
+        <!--Footer for footer items-->
+        <!--Column 3 of 3-->
+        <div class="right-menu-footer-items">
+            <div class="right-menu-footer-items-github">
+                <a href="#">
+                    <img src="{% static 'portfolioApp/images/sidebar-nav/github.png' %}" class="footer-items-github">
+                </a>
+            </div>
         </div>
     </div>
+
+
+    <div class="column-2 main-content">
+        {# Page content goes in between the block body tags #}
+        {% block body %}
+
+        {% endblock body %}
+    </div>
+
+    <div class="column-3 optional-right-menu">
+        {# Optional menu items goes in between the optionalRightMenu tags #}
+        {% block optionalRightMenu %}
+
+        {% endblock optionalRightMenu %}
+    </div>
+</div>
 </body>
 </html>

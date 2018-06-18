@@ -1,0 +1,74 @@
+.column-1.side-menu {
+    grid-area: menu;
+    background-color: #F2F2F2;
+    justify-self: start;
+
+    /* Grid layout for side-menu-content */
+    display: grid;
+    grid-template-areas:
+        'header header header header header header'
+        'main main main main main main'
+        'footer footer footer footer footer footer';
+}
+
+.column-2.main-content {
+    grid-area: main;
+    text-align: center;
+
+
+}
+
+.column-3.optional-right-menu {
+    grid-area: right;
+
+}
+
+.column-1.side-menu > .right-menu-logo {
+    grid-area: header;
+    justify-self: center;
+    padding: 20px 40px 170px 40px;
+
+}
+
+.column-1.side-menu > .right-menu-nav-items {
+    grid-area: main;
+    justify-self: center;
+}
+
+.side-menu-icons {
+    padding-bottom: 45px;
+}
+
+.column-1.side-menu > .right-menu-footer-items {
+    padding-top: 170px;
+    grid-area: footer;
+    justify-self: center;
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+.parentContainer {
+    display: grid;
+    grid-template-areas:
+        'menu main main main main right'
+        'menu main main main main right'
+        'menu main main main main right';
+    height: 100%;
+}
+
+.side-menu-icons {
+    height: 40px;
+    width: 40px;
+}
+
+.footer-items-github {
+    height: 45px;
+    width: 45px;
+
+    bottom: 0;
+}
