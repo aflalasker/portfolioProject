@@ -1,11 +1,18 @@
 {% extends 'portfolioApp/base.html' %}
 {% load static %}
 
-    {% block title %}
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/homepage-styles.css' %}">
+{% endblock header %}
 
-    {% endblock title %}
-            {% block body %}
-            {% for user in user %}
-                <h3>{{user.email}}</h3>
-            {% endfor %}
-            {% endblock body %}
+{% block title %}
+    Home
+{% endblock title %}
+{% block body %}
+    <div class="head-text">
+        {% for user in user %}
+            <h1 class="large-text">Hi, <br> I'm {{user.first_name }} <br> Computer Science Student</h1>
+            <h1 class="accent-text">AT KING'S COLLEGE LONDON </h1>
+        {% endfor %}
+    </div>
+{% endblock body %}
