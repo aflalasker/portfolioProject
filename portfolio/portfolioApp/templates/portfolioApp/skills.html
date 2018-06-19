@@ -1,0 +1,19 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/skills-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Skill's and Experience {% endblock title %}
+
+{% block body %}
+    {% for skill in skills %}
+        {{skill.name}}
+        {{skill.skillImage}}
+    {% endfor %}
+{% endblock body %}
+
+{% block optionalRightMenu %}
+
+{% endblock optionalRightMenu %}

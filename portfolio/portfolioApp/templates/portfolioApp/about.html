@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block header %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'portfolioApp/css/aboutpage-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/overlay-menu-styles.css' %}">
 {% endblock header %}
 
 {% block title %} About me {% endblock title %}
@@ -19,7 +21,8 @@
                 Sit amet commodo nulla facilisi nullam vehicula ipsum. Maecenas pharetra convallis posuere morbi
                 leo urna molestie at elementum. Justo nec ultrices dui sapien eget mi proin. Quis imperdiet massa
                 tincidunt nunc pulvinar sapien. Eget egestas purus viverra accumsan in. Adipiscing diam donec
-                adipiscing tristique. Ultricies mi quis hendrerit dolor magna. <br><br>Ultrices vitae auctor eu augue ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                adipiscing tristique. Ultricies mi quis hendrerit dolor magna. <br><br>Ultrices vitae auctor eu augue
+                ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Dignissim suspendisse in est ante in nibh mauris cursus
                 mattis. Adipiscing bibendum est ultricies integer quis auctor. Diam quam nulla porttitor massa id
                 neque aliquam vestibulum. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet.
@@ -33,5 +36,12 @@
 {% endblock body %}
 
 {% block optionalRightMenu %}
-    {% include 'portfolioApp/_overlay-menu.html' %}
+       <label>
+        <input type='checkbox'>
+            <span class='menu'> <span class='hamburger'></span> </span>
+            <ul>
+                <li class="work-experience"> <a href='#'><img src="{% static 'portfolioApp/images/icon-buttons/work.png' %}"> </a> </li>
+                <li class="qualification"> <a href='#'><img src="{% static 'portfolioApp/images/icon-buttons/qualification-and-achievement.png' %}"></a> </li>
+            </ul>
+    </label>
 {% endblock optionalRightMenu %}
