@@ -1,0 +1,32 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/portfoliopage-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Portfolio {% endblock title %}
+
+{% block body %}
+    <div class="portfolio">
+        <h1>What I've done...</h1>
+        {% for p in project %}
+            <a href="{% url 'portfolio:projectDetails' id=p.id %}">
+                <div class="individualProject">
+                    <img src="{{p.coverImage.url}}" alt="" class="portfolioCoverImage">
+                    <div class="title">
+                        <p>{{p.title}}</p><br><br>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock body %}
+
+{% block optionalRightMenu %}
+    <div class="testimonialButton">
+        <a href="">
+            <img src="{% static 'portfolioApp/images/icon-buttons/testimonial.png' %}" alt="" class="testimonial-icon">
+        </a>
+    </div>
+{% endblock optionalRightMenu %}

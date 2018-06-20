@@ -1,0 +1,58 @@
+.portfolio {
+    padding-left: 2rem;
+    padding-top: 4rem;
+}
+
+.portfolioCoverImage {
+    max-width: 450px;
+    max-height: 253px;
+}
+
+.individualProject {
+    float: left;
+    padding-right: 2rem;
+    justify-content: center;
+}
+
+body {
+    font-family: 'Segoe UI';
+}
+
+h1 {
+    font-style: italic;
+    text-align: left;
+    font-size: 39px;
+    font-weight: 700;
+    padding-bottom: 4rem;
+}
+
+.title > p {
+    font-size: 16px;
+    font-weight: 600;
+        margin-top: 0;
+    margin-bottom: 0
+}
+
+p, p:hover, p:active, p:before, p:after, p:visited, p:focus {
+    text-decoration: none;
+    text-underline: none;
+    color: black;
+    cursor: pointer;
+}
+
+.column-3.optional-right-menu {
+    display: flex;
+    justify-content: center;
+}
+
+.testimonialButton {
+     padding-top: 2rem;
+     padding-right: 1.2rem;
+}
+
+.testimonial-icon {
+    width: 100px;
+    height: 70px;
+}
+
+

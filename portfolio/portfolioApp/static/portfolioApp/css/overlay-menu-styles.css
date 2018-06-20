@@ -97,8 +97,8 @@ label ul {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
-    -webkit-transition: .25s 0s ease-in-out;
-    transition: .25s 0s ease-in-out;
+    -webkit-transition: .50s 08s ease-in-out;
+    transition: .50s .08s ease-in-out;
 }
 
 label a {

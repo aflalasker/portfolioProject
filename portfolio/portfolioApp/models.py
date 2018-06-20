@@ -10,7 +10,7 @@ class ProjectHeader(models.Model):
     projectDetails = models.ForeignKey('ProjectDetails', on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.title
+        return 'ID = {}, Title = {}'.format(self.id, self.title)
 
 
 class ProjectDetails(models.Model):
@@ -19,7 +19,7 @@ class ProjectDetails(models.Model):
     detailedDescription = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return self.id + ' ' + self.projectLink
+        return self.projectLink
 
 
 # Model for Client Testimonials

@@ -2,18 +2,44 @@
 {% load static %}
 
 {% block header %}
-    <link rel="stylesheet" href="{% static 'portfolioApp/css/skills-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/skillspage-styles.css' %}">
 {% endblock header %}
 
 {% block title %} Skill's and Experience {% endblock title %}
 
 {% block body %}
-    {% for skill in skills %}
-        {{skill.name}}
-        {{skill.skillImage}}
-    {% endfor %}
+    <div class="head-text">
+            <h1 class="large-text">Skills and Experiences</h1>
+            <h4 class="accent-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Dignissim suspendisse in est ante in nibh mauris cursus
+                mattis. Adipiscing bibendum est ultricies integer quis auctor. Diam quam nulla porttitor massa id
+                neque aliquam vestibulum. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet.
+                Rhoncus mattis rhoncus urna neque viverra justo nec. Purus non enim praesent elementum facilisis leo
+                vel fringilla est. Pharetra convallis posuere morbi leo. Non tellus orci ac auctor augue mauris.
+                Sit amet commodo nulla facilisi nullam vehicula ipsum. Maecenas pharetra convallis posuere morbi
+                leo urna molestie at elementum. Justo nec ultrices dui sapien eget mi proin. Quis imperdiet massa
+                tincidunt nunc pulvinar sapien. Eget egestas purus viverra accumsan in. Adipiscing diam donec
+                adipiscing tristique. Ultricies mi quis hendrerit dolor magna. <br><br>Ultrices vitae auctor eu augue
+                ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Dignissim suspendisse in est ante in nibh mauris cursus
+                mattis. Adipiscing bibendum est ultricies integer quis auctor. Diam quam nulla porttitor massa id
+                neque aliquam vestibulum. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet.
+                Rhoncus mattis rhoncus urna neque viverra justo nec. Purus non enim praesent elementum facilisis leo
+                vel fringilla est. Pharetra convallis posuere morbi leo. Non tellus orci ac auctor augue mauris.
+                Sit amet commodo nulla facilisi nullam vehicula ipsum. Maecenas pharetra convallis posuere morbi
+                leo urna molestie at elementum. Justo nec ultrices dui sapien eget mi proin. Quis imperdiet massa
+                tincidunt nunc pulvinar sapien. Eget egestas purus viverra accumsan in. Adipiscing diam donec
+                adipiscing tristique. Ultricies mi quis hendrerit dolor magna. Ultrices vitae auctor eu augue ut.</h4>
+    </div>
 {% endblock body %}
 
 {% block optionalRightMenu %}
-
+    <div class="language-display">
+        {% for s in skill %}
+        <div class="html each-language">
+            <img src="{{ s.skillImage.url }}" class="skillImage">
+            <p class="skillTitle">{{s.name}}</p>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock optionalRightMenu %}

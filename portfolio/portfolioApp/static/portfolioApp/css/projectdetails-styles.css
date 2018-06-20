@@ -1,0 +1,44 @@
+div.column-2.main-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.textDetail {
+    max-width: 45rem;
+    margin: 0;
+    padding-left: 40rem;
+    text-align: left;
+    font-family: "Segoe UI";
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 41px;
+}
+
+p {
+    word-break: break-all;
+    line-height: 34px;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+div.column-2.main-content::-webkit-scrollbar {
+    width: 10px;
+	background-color: #F5F5F5;
+}
+
+div.column-2.main-content::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+    background: #AAAAAA -webkit-linear-gradient(90deg,
+    rgba(0, 0, 0, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, .2) 50%,
+    rgba(0, 0, 0, .2) 75%,
+    transparent 75%,
+    transparent);
+}

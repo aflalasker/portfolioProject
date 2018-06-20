@@ -1,0 +1,19 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+        <link rel="stylesheet" href="{% static 'portfolioApp/css/projectDetails-styles.css' %}">
+{% endblock header %}
+{% block title %} Project Details {% endblock title %}
+
+{% block body %}
+        <div class="project">
+                <div class="details">
+                        <img src="{{ project.coverImage.url }}" alt="">
+                        <div class="textDetail">
+                                <h1>{{project.title}}</h1>
+                                <p>{{project.projectDetails.detailedDescription}}</p>
+                        </div>
+                </div>
+        </div>
+{% endblock body %}
