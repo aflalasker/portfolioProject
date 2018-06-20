@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block header %}
-    <link rel="stylesheet" href="{% static 'portfolioApp/css/skillspage-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/skillspag-styles.css' %}">
 {% endblock header %}
 
 {% block title %} Skill's and Experience {% endblock title %}
@@ -10,7 +10,7 @@
 {% block body %}
     <div class="head-text">
             <h1 class="large-text">Skills and Experiences</h1>
-            <h4 class="accent-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            <p class="accent-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Dignissim suspendisse in est ante in nibh mauris cursus
                 mattis. Adipiscing bibendum est ultricies integer quis auctor. Diam quam nulla porttitor massa id
                 neque aliquam vestibulum. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet.
@@ -29,12 +29,19 @@
                 Sit amet commodo nulla facilisi nullam vehicula ipsum. Maecenas pharetra convallis posuere morbi
                 leo urna molestie at elementum. Justo nec ultrices dui sapien eget mi proin. Quis imperdiet massa
                 tincidunt nunc pulvinar sapien. Eget egestas purus viverra accumsan in. Adipiscing diam donec
-                adipiscing tristique. Ultricies mi quis hendrerit dolor magna. Ultrices vitae auctor eu augue ut.</h4>
+                adipiscing tristique. Ultricies mi quis hendrerit dolor magna. Ultrices vitae auctor eu augue ut.</p>
     </div>
 {% endblock body %}
 
 {% block optionalRightMenu %}
     <div class="language-display">
+        {% for s in skill %}
+        <div class="html each-language">
+            <img src="{{ s.skillImage.url }}" class="skillImage">
+            <p class="skillTitle">{{s.name}}</p>
+        </div>
+        {% endfor %}
+
         {% for s in skill %}
         <div class="html each-language">
             <img src="{{ s.skillImage.url }}" class="skillImage">

@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import User, Skill, ProjectHeader
+from .models import User, Skill, ProjectHeader, Testimonials
 
 # Create your views here.
 
@@ -31,4 +31,10 @@ def project_details(request, id):
     project = get_object_or_404(ProjectHeader, id=id)
     context = {'project': project}
     return render(request, 'portfolioApp/projectDetails.html', context)
+
+
+def testimonials(request):
+    testimonial = Testimonials.objects.all()
+    context = {'testimonial': testimonial}
+    return render(request, 'portfolioApp/testimonial.html', context)
 

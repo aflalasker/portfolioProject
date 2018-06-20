@@ -2,21 +2,24 @@
     font-family: "Segoe UI";
 }
 
-.column-2.main-content {
+div.column-2.main-content {
     display: flex;
     grid-template-rows: none;
     text-align: left;
-    padding-top: 10rem;
     font-size: 1.3rem;
     font-family: "Segoe UI";
     word-break: break-all;
+    margin: auto;
+    padding-left: 5rem;
+    padding-right: 5rem;
 
 
 }
 
-.head-text {
+div.head-text {
     max-width: 50rem;
-    padding-left: 16rem;
+    overflow-y: auto;
+    max-height: 70rem;
 }
 
 .head-text > .large-text {
@@ -26,11 +29,13 @@
 }
 
 .head-text > .accent-text {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.15rem;
     line-height: 2.2rem;
     margin-top: 0;
     text-align: left;
+    overflow-y: auto;
+    letter-spacing: 2px;
 }
 
 .right-menu-nav-items {
@@ -43,5 +48,23 @@ body {
 
 .column-1.side-menu > .right-menu-logo {
     padding-bottom: 162px;
+}
+
+div.head-text::-webkit-scrollbar {
+    width: 10px;
+	background-color: #F5F5F5;
+}
+
+div.head-text::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+    background: #AAAAAA -webkit-linear-gradient(90deg,
+    rgba(0, 0, 0, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, .2) 50%,
+    rgba(0, 0, 0, .2) 75%,
+    transparent 75%,
+    transparent);
 }
 

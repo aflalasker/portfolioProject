@@ -6,18 +6,20 @@
     display: flex;
     grid-template-rows: none;
     text-align: left;
-    padding-top: 10rem;
     font-size: 1.3rem;
     font-family: "Segoe UI";
     word-break: break-all;
-    overflow: auto;
+    margin: auto;
 
 
 }
 
 .head-text {
     max-width: 50rem;
-    padding-left: 16rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    max-height: 70rem;
+    overflow: auto;
 }
 
 .head-text > .large-text {
@@ -27,11 +29,12 @@
 }
 
 .head-text > .accent-text {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.15rem;
     line-height: 2.2rem;
     margin-top: 0;
     text-align: left;
+    letter-spacing: 2px;
 }
 
 .right-menu-nav-items {
@@ -50,12 +53,14 @@ body {
     background-color: #F2F2F2;
     display: flex;
     justify-content: center;
-    overflow: auto;
+    overflow-x: hidden;
 }
 
 .each-language {
     padding-top: 3.5rem;
     padding-bottom: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .column-3.optional-right-menu::-webkit-scrollbar {
@@ -76,16 +81,36 @@ body {
     transparent);
 }
 
-img.skillImage {
-    max-width: 120px;
-    max-height: 125px;
-}
-
 p.skillTitle {
     margin: 0;
     text-align: center;
     font-family: "Segoe UI";
     font-style: italic;
-    font-size: 1.2rem;
     font-weight: 600;
+    font-size: 1rem;
 }
+
+.skillImage {
+    max-width: 60px;
+    padding-left: 5px;
+}
+
+.head-text::-webkit-scrollbar {
+    width: 10px;
+	background-color: #F5F5F5;
+}
+
+.head-text::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+    background: #AAAAAA -webkit-linear-gradient(90deg,
+    rgba(0, 0, 0, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, .2) 50%,
+    rgba(0, 0, 0, .2) 75%,
+    transparent 75%,
+    transparent);
+}
+
+

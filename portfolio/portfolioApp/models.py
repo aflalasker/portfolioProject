@@ -28,8 +28,8 @@ class Testimonials(models.Model):
     clientName = models.CharField(max_length=50, blank=True, default='anonymous')
     testimonialDescription = models.TextField(blank=True, null=True)
 
-    def __str(self):
-        return self.clientCompanyName + ' ' + self.clientName
+    def __str__(self):
+        return 'Company: {}, Client: {}'.format(self.clientCompanyName, self.clientName)
 
 
 # Model for Resume

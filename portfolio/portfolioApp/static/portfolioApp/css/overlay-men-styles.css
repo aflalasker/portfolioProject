@@ -116,8 +116,7 @@ li.work-experience {
     border-style: none;
     width: 189px;
     height: 131px;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-right: 5rem;
     display: table;
 }
 
@@ -125,10 +124,17 @@ li.qualification {
     border-style: none;
     width: 189px;
     height: 131px;
-    padding-right: 3rem;
-    padding-left: 3rem;
+    padding-left: 5rem;
     display: table;
 }
 
+.imageOne {
+    max-width: 10rem;
+    padding-left: 5rem;
+}
 
+.imageTwo {
+    max-width: 7.8rem;
+    padding-right: 5rem;
+}
 

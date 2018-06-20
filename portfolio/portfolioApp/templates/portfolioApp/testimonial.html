@@ -1,0 +1,24 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/testimonialpage-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Testimonial {% endblock title%}
+
+{% block body %}
+    <div class="testimonials">
+        {% for t in testimonial %}
+        <div class="individualTestimonial">
+            <img src="{% static 'portfolioApp/images/icons/quote-testimonials-page.png' %}" alt="" class="quotation"><br>
+            <div class="description">
+                <h1>{{t.clientName }}</h1>
+                <p class="clientDescription">{{ t.testimonialDescription }}</p>
+                <p class="names">{{ t.clientCompanyName }}, {{ t.clientName }}</p>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+{% endblock body %}

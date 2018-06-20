@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block header %}
-    <link rel="stylesheet" href="{% static 'portfolioApp/css/portfoliopage-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/portfoliopag-styles.css' %}">
 {% endblock header %}
 
 {% block title %} Portfolio {% endblock title %}
@@ -25,7 +25,7 @@
 
 {% block optionalRightMenu %}
     <div class="testimonialButton">
-        <a href="">
+        <a href="{% url 'portfolio:testimonial' %}">
             <img src="{% static 'portfolioApp/images/icon-buttons/testimonial.png' %}" alt="" class="testimonial-icon">
         </a>
     </div>
