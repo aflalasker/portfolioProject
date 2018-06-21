@@ -1,0 +1,39 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/workExperiencepag-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Work-Experiences {% endblock title %}
+
+{% block body %}
+    {% include 'portfolioApp/_overlay.html' %}
+    <div class="work-experiences">
+        {% for e in experience %}
+        <div class="individualWorkExperiences">
+            <div class="description">
+                <div class="companyName">
+                    <h1>{{e.companyName }}</h1>
+                </div>
+                <div class="dates">
+                    <p class="date">Start Date: {{ e.startDate|date:"d/m/Y" }}</p>
+                    {% if e.endDate == None %}
+                        <p class="date">{{ e.ifCurrentJob }}</p>
+                    {% else %}
+                        <p class="date">End Date: {{ e.endDate|date:"d/m/Y" }}</p><br><br>
+                    {% endif %}
+                </div>
+
+                <div class="positionTitle">
+                    <p class="position">{{ e.position }}</p><br>
+                </div>
+                <div class="textBody">
+                    <p class="clientDescription">{{e.Description}}</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+{% endblock body %}

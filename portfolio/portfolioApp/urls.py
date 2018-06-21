@@ -4,7 +4,11 @@ from django.urls import path, include
 app_name = 'portfolioApp'
 urlpatterns = [
     path('', views.index, name='home'),
-    path('about', views.about, name='about'),
+    path('about/', include([
+        path('', views.about, name='about'),
+        path('work-experience', views.work_experience, name='workExperience'),
+        path('qualification', views.qualification, name='qualification'),
+    ])),
     path('skills', views.skills, name='skills'),
     path('portfolio/', include([
         path('', views.portfolio, name='portfolio'),

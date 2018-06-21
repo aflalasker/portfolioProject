@@ -9,7 +9,7 @@
     font-size: 1.3rem;
     font-family: "Segoe UI";
     word-break: break-all;
-    margin: auto;
+    overflow-y: auto;
 
 
 }
@@ -19,7 +19,8 @@
     padding-left: 5rem;
     padding-right: 5rem;
     max-height: 70rem;
-    overflow: auto;
+    margin: auto;
+    margin-top: 5rem;
 }
 
 .head-text > .large-text {
@@ -95,12 +96,12 @@ p.skillTitle {
     padding-left: 5px;
 }
 
-.head-text::-webkit-scrollbar {
+.column-2.main-content::-webkit-scrollbar {
     width: 10px;
 	background-color: #F5F5F5;
 }
 
-.head-text::-webkit-scrollbar-thumb {
+.column-2.main-content::-webkit-scrollbar-thumb {
 
     border-radius: 10px;
     background: #AAAAAA -webkit-linear-gradient(90deg,

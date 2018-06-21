@@ -1,0 +1,94 @@
+body {
+    font-family: 'Segoe UI';
+    overflow-x: hidden;
+}
+
+.description {
+    text-align: left;
+    margin: auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 2px;
+}
+
+
+div.column-2.main-content {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 5rem;
+}
+
+div.column-2.main-content::-webkit-scrollbar {
+    width: 10px;
+	background-color: #F5F5F5;
+}
+
+div.column-2.main-content::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+    background: #AAAAAA -webkit-linear-gradient(90deg,
+    rgba(0, 0, 0, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, .2) 50%,
+    rgba(0, 0, 0, .2) 75%,
+    transparent 75%,
+    transparent);
+}
+
+
+.individualWorkExperiences {
+    margin: auto;
+    max-width: 650px;
+    word-break: break-all;
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-bottom: 3rem;
+}
+
+.clientDescription {
+    letter-spacing: 1px;
+    line-height: 33px;
+}
+
+.date {
+    font-weight: 500;
+    opacity: 0.7;
+    text-transform: capitalize;
+    float: left;
+    padding-right: 4rem;
+}
+
+.parentContainer {
+    display: grid;
+    grid-template-areas:
+        'menu main main main main main'
+        'menu main main main main main'
+        'menu main main main main main';
+    height: 100%;
+}
+
+.column-3.optional-right-menu {
+    grid-area: main;
+}
+
+.position {
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 0;
+    opacity: 0.7;
+    margin-top: 0;
+}
+
+.clientDescription {
+    margin-top: 0;
+    text-align: left;
+}
+.dates {
+    display: inline-block;
+}
+

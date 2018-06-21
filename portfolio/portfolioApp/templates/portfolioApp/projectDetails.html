@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block header %}
-        <link rel="stylesheet" href="{% static 'portfolioApp/css/projectDetails-styles.css' %}">
+        <link rel="stylesheet" href="{% static 'portfolioApp/css/projectDetailspag-styles.css' %}">
+
 {% endblock header %}
 {% block title %} Project Details {% endblock title %}
 
@@ -11,9 +12,17 @@
                 <div class="details">
                         <img src="{{ project.coverImage.url }}" alt="">
                         <div class="textDetail">
-                                <h1>{{project.title}}</h1>
+                                <h1>{{project.title}}
+                                        <form action="{{ project.projectDetails.websiteLink }}">
+                                                <button type="submit" class="linkButtons">Website</button>
+                                        </form>
+                                        <form action="{{ project.projectDetails.projectLink }}">
+                                                <button type="submit" class="linkButtons">GitHub</button>
+                                        </form>
+                                </h1>
                                 <p>{{project.projectDetails.detailedDescription}}</p>
                         </div>
                 </div>
         </div>
+
 {% endblock body %}

@@ -2,24 +2,37 @@
     font-family: "Segoe UI";
 }
 
+.parentContainer {
+    display: grid;
+    grid-template-areas:
+        'menu main main main main main'
+        'menu main main main main main'
+        'menu main main main main main';
+    height: 100%;
+}
+
+.column-3.optional-right-menu {
+    grid-area: main;
+}
+
+
 div.column-2.main-content {
-    display: flex;
-    grid-template-rows: none;
+    margin-top: 5rem;
     text-align: left;
     font-size: 1.3rem;
     font-family: "Segoe UI";
     word-break: break-all;
-    margin: auto;
     padding-left: 5rem;
     padding-right: 5rem;
+    overflow-y: auto;
 
 
 }
 
 div.head-text {
+    margin: auto;
     max-width: 50rem;
-    overflow-y: auto;
-    max-height: 70rem;
+
 }
 
 .head-text > .large-text {
@@ -34,7 +47,7 @@ div.head-text {
     line-height: 2.2rem;
     margin-top: 0;
     text-align: left;
-    overflow-y: auto;
+
     letter-spacing: 2px;
 }
 
@@ -50,12 +63,12 @@ body {
     padding-bottom: 162px;
 }
 
-div.head-text::-webkit-scrollbar {
+div.column-2.main-content::-webkit-scrollbar {
     width: 10px;
 	background-color: #F5F5F5;
 }
 
-div.head-text::-webkit-scrollbar-thumb {
+div.column-2.main-content::-webkit-scrollbar-thumb {
 
     border-radius: 10px;
     background: #AAAAAA -webkit-linear-gradient(90deg,
@@ -67,4 +80,5 @@ div.head-text::-webkit-scrollbar-thumb {
     transparent 75%,
     transparent);
 }
+
 

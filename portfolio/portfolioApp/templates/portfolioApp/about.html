@@ -3,13 +3,14 @@
 
 {% block header %}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="{% static 'portfolioApp/css/aboutpag-styles.css' %}">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/aboutp-styles.css' %}">
     <link rel="stylesheet" href="{% static 'portfolioApp/css/overlay-men-styles.css' %}">
 {% endblock header %}
 
 {% block title %} About me {% endblock title %}
 
 {% block body %}
+{% include 'portfolioApp/_overlay.html' %}
      <div class="head-text">
             <h1 class="large-text">About me</h1>
             <p class="accent-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -35,13 +36,14 @@
     </div>
 {% endblock body %}
 
-{% block optionalRightMenu %}
-       <label>
-        <input type='checkbox'>
-            <span class='menu'> <span class='hamburger'></span> </span>
-            <ul>
-                <li class="work-experience"> <a href='#'><img src="{% static 'portfolioApp/images/icon-buttons/work.png' %}" class="imageOne"> </a> </li>
-                <li class="qualification"> <a href='#'><img src="{% static 'portfolioApp/images/icon-buttons/qualification-and-achievement.png' %}" class="imageTwo"></a> </li>
-            </ul>
-    </label>
-{% endblock optionalRightMenu %}
+
+
+
+       <!--<label>-->
+        <!--<input type='checkbox'>-->
+            <!--<span class='menu'> <span class='hamburger'></span> </span>-->
+            <!--<ul>-->
+                <!--<li class="work-experience"> <a href="{% url 'portfolio:workExperience' %}"><img src="{% static 'portfolioApp/images/icon-buttons/work.png' %}" class="imageOne"> </a> </li>-->
+                <!--<li class="qualification"> <a href="{% url 'portfolio:qualification' %}"><img src="{% static 'portfolioApp/images/icon-buttons/qualification-and-achievement.png' %}" class="imageTwo"></a> </li>-->
+            <!--</ul>-->
+    <!--</label>-->

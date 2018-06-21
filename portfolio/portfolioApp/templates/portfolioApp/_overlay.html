@@ -1,0 +1,16 @@
+
+{% load static %}
+{% block header %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/overlay-men-styles.css' %}">
+{% endblock header %}
+{% block body %}
+    <label>
+        <input type='checkbox'>
+            <span class='menu'> <span class='hamburger'></span> </span>
+            <ul>
+                <li class="work-experience"> <a href="{% url 'portfolio:workExperience' %}"><img src="{% static 'portfolioApp/images/icon-buttons/work.png' %}" class="imageOne"> </a> </li>
+                <li class="qualification"> <a href="{% url 'portfolio:qualification' %}"><img src="{% static 'portfolioApp/images/icon-buttons/qualification-and-achievement.png' %}" class="imageTwo"></a> </li>
+            </ul>
+    </label>
+{% endblock body %}

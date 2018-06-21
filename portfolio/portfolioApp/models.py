@@ -47,10 +47,11 @@ class Experience(models.Model):
 
 class Qualification(models.Model):
     institution = models.CharField(max_length=50)
-    graduatedDate = models.DateTimeField(blank=True, null=True)
+    graduatedDate = models.DateField(blank=True, null=True)
     subjects = models.TextField()  # For subjects and results
+    overallGradesAndLevel = models.TextField(blank=True, null=True)
 
-    def _str__(self):
+    def __str__(self):
         return self.institution
 
 

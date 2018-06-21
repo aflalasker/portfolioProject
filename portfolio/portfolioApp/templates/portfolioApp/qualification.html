@@ -1,0 +1,34 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/qualificationpag-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Qualification {% endblock title %}
+
+{% block body %}
+    {% include 'portfolioApp/_overlay.html' %}
+    <div class="institutions">
+        {% for q in qualification %}
+        <div class="individualInstitutions">
+            <div class="description">
+                <div class="institutionName">
+                    <h1>{{q.institution }}</h1>
+                </div>
+                <div class="dates">
+                    <p class="date">Graduated Date: {{ q.graduatedDate|date:"d/m/Y" }}</p>
+                </div>
+
+                <div class="levelAndOverallGrades">
+                    <p class="levelAndGrade">Overall Grade & Level: {{ q.overallGradesAndLevel }}</p><br>
+                </div>
+                <div class="allSubjectsAndGrades">
+                    <p class="subjectsAndGrades">{{q.subjects}}</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+{% endblock body %}

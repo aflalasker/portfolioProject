@@ -41,3 +41,35 @@ div.column-2.main-content::-webkit-scrollbar-thumb {
     transparent 75%,
     transparent);
 }
+
+.parentContainer {
+    display: grid;
+    grid-template-areas:
+        'menu main main main main main'
+        'menu main main main main main'
+        'menu main main main main main';
+    height: 100%;
+}
+
+.column-3.optional-right-menu {
+    grid-area: main;
+}
+
+form {
+    display: inline-block;
+}
+
+.linkButtons {
+    background-color: #F2F2F2;
+    border: none;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+
+.linkButtons:hover {
+    cursor: pointer;
+}
