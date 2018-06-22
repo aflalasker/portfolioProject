@@ -1,0 +1,25 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/blogpageon-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Blog {% endblock %}
+
+{% block body %}
+        <div class="Blogs">
+        {% for t in topics %}
+        <div class="individualBlog">
+            <a href="{% url 'portfolio:detailedBlog' id=t.id %}" class="blogLink">
+                <div class="description">
+                    <h1>{{t.blogTopic }}</h1>
+                    <p class="blogDescription">{{ t.description|truncatewords:60 }}</p>
+                    <p class="authorAndDate">Created by: {{ t.author }} on {{ t.dateCreated }}</p>
+                </div>
+             </a>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+{% endblock body %}

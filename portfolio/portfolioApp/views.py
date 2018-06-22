@@ -1,5 +1,8 @@
 from django.shortcuts import render, get_object_or_404
-from .models import User, Skill, ProjectHeader, Testimonials, Experience, Qualification
+from .models import User, Skill, ProjectHeader, Testimonials, Experience, Qualification, Blog, ContactMe
+from.forms import ContactMeForm
+
+from django.contrib import messages
 
 # Create your views here.
 
@@ -51,4 +54,24 @@ def qualification(request):
     return render(request, 'portfolioApp/qualification.html', context)
 
 
+def blog(request):
+    topics = Blog.objects.all()
+    context = {'topics': topics}
+    return render(request, 'portfolioApp/blog.html', context)
+
+
+def detailed_blog(request, id):
+    topic = get_object_or_404(Blog, id=id)
+    context = {'topic': topic}
+    return render(request, 'portfolioApp/detailedBlog.html', context)
+
+
+def contact_me(request):
+    form = ContactMeForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        messages.success(request, "You message has been Successfully sent :)")
+    context = {'form': form}
+    return render(request, 'portfolioApp/contactMe.html', context)
 

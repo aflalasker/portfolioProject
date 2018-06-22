@@ -1,0 +1,21 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'portfolioApp/css/detailedblogpage-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Further Details {% endblock title %}
+
+{% block body %}
+        <div class="Blogs">
+        <div class="individualBlog">
+                <div class="description">
+                    <h1>{{topic.blogTopic }}</h1>
+                    <p class="blogDescription">{{ topic.description }}</p>
+                    <p class="authorAndDate">Created by: {{ topic.author }} on {{ topic.dateCreated }}</p>
+                </div>
+        </div>
+        <br>
+    </div>
+{% endblock body %}

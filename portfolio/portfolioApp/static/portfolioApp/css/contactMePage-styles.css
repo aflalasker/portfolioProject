@@ -1,0 +1,133 @@
+body {
+    font-family: "Segoe UI";
+}
+
+.parentContainer {
+    display: grid;
+    grid-template-areas:
+        'menu main main right right right right right right right right right right right right'
+        'menu main main right right right right right right right right right right right right'
+        'menu main main right right right right right right right right right right right right';
+    height: 100%;
+}
+
+.column-3.optional-right-menu {
+    grid-area: right;
+}
+
+.column-2.main-content {
+    grid-area: main;
+}
+
+
+.column-2.main-content {
+    justify-self: center;
+}
+
+.form {
+    margin-top: 7rem;
+}
+
+h1 {
+    text-align: left;
+    font-style: italic;
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+p.accentText {
+    text-align: left;
+    margin-top: 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    margin-bottom: 5rem;
+    width: 35rem;
+}
+
+p {
+    text-align: left;
+    padding-bottom: 2rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+form.formInput {
+    margin-top: 15rem;
+}
+
+#id_name, #id_email, #id_subject {
+    min-width: 30rem;
+    min-height: 2rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-color: grey;
+    opacity: 0.5;
+    font-family: "Segoe UI";
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: black;
+}
+
+#id_message {
+    min-width: 30rem;
+    min-height: 2rem;
+    border-color: grey;
+    opacity: 0.5;
+    border-width: 2px;
+    resize: none;
+    font-family: "Segoe UI";
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: black;
+    margin-top: 2rem;
+}
+
+label {
+    display: none;
+}
+
+#id_message::-webkit-scrollbar {
+    width: 5px;
+	background-color: #F5F5F5;
+}
+
+#id_message::-webkit-scrollbar-thumb {
+
+    border-radius: 10px;
+    background: #AAAAAA -webkit-linear-gradient(90deg,
+    rgba(0, 0, 0, .2) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, .2) 50%,
+    rgba(0, 0, 0, .2) 75%,
+    transparent 75%,
+    transparent);
+}
+
+.submitIcon {
+    max-width: 3rem;
+    padding-right: 8rem;
+    padding-top: 2rem;
+}
+
+#id_message:focus,#id_name:focus, #id_email:focus, #id_subject:focus, .submitIcon:focus {
+    outline: none;
+}
+
+
+li.success {
+    list-style: none;
+    color: green;
+    font-size: 23px;
+    text-align: center;
+    float: left;
+    padding-top: 4rem;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}

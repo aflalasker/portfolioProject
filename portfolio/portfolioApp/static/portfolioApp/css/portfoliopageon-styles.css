@@ -49,8 +49,9 @@ p, p:hover, p:active, p:before, p:after, p:visited, p:focus {
 }
 
 .testimonialButton {
-     padding-top: 2rem;
+     padding-top: 0rem;
      padding-right: 1.2rem;
+     float: right;
 }
 
 .testimonial-icon {
@@ -59,9 +60,10 @@ p, p:hover, p:active, p:before, p:after, p:visited, p:focus {
 }
 
 .column-2.main-content {
-    margin-left: 5rem;
     overflow-y: auto;
     overflow-x: hidden;
+    margin-top: 2rem;
+    margin-left: 3rem;
 }
 
 div.column-2.main-content::-webkit-scrollbar {
@@ -82,3 +84,33 @@ div.column-2.main-content::-webkit-scrollbar-thumb {
     transparent);
 }
 
+
+.parentContainer {
+    display: grid;
+    grid-template-areas:
+        'menu main main main main main'
+        'menu main main main main main'
+        'menu main main main main main';
+    height: 100%;
+}
+
+.column-3.optional-right-menu {
+    grid-area: main;
+}
+
+.portfolioCoverImage {
+    transition: transition .5s;
+}
+
+.portfolioCoverImage:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+}
+
+@media (max-width: 1750px) {
+    .portfolioCoverImage {
+        max-width: 420px;
+    }
+}

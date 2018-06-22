@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django.utils import timezone
 
 
 # Models for the Project and Project Details itself
@@ -71,6 +72,27 @@ class User(AbstractUser):
     bio = models.TextField(blank=True, null=True)
     shortBio = models.TextField(blank=True, null=True)
     mobileNumber = models.IntegerField(blank=True, null=True)
+
+
+class Blog(models.Model):
+    blogTopic = models.CharField(max_length=100)
+    description = models.TextField()
+    author = models.CharField(max_length=50)
+    dateCreated = models.DateField()
+
+    def __str__(self):
+        return self.blogTopic
+
+
+class ContactMe(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    subject = models.CharField(max_length=150)
+    message = models.TextField(blank=True, null=True)
+    date_received = models.DateField(default=timezone.now)
+
+    def __str__(self):
+        return 'Name: {}, Date Received: {}'.format(self.name, self.date_received)
 
 
 

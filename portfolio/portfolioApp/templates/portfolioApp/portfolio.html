@@ -2,13 +2,21 @@
 {% load static %}
 
 {% block header %}
-    <link rel="stylesheet" href="{% static 'portfolioApp/css/portfoliopa-styles.css' %}">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/portfoliopageon-styles.css' %}">
 {% endblock header %}
 
 {% block title %} Portfolio {% endblock title %}
 
 {% block body %}
+    <div class="testimonialButton">
+        <a href="{% url 'portfolio:testimonial' %}">
+            <img src="{% static 'portfolioApp/images/icon-buttons/testimonial.png' %}" alt="" class="testimonial-icon">
+        </a>
+    </div>
+
     <div class="portfolio">
+
         <h1>What I've done...</h1>
         {% for p in project %}
             <a href="{% url 'portfolio:projectDetails' id=p.id %}">
@@ -21,12 +29,7 @@
             </a>
         {% endfor %}
     </div>
-{% endblock body %}
 
-{% block optionalRightMenu %}
-    <div class="testimonialButton">
-        <a href="{% url 'portfolio:testimonial' %}">
-            <img src="{% static 'portfolioApp/images/icon-buttons/testimonial.png' %}" alt="" class="testimonial-icon">
-        </a>
-    </div>
-{% endblock optionalRightMenu %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+{% endblock body %}

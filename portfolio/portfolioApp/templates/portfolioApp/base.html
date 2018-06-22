@@ -3,6 +3,7 @@
 
 <html lang="en">
 <head>
+    <link rel="icon" href="{% static 'portfolioApp/images/favicon.ico' %}">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -23,7 +24,9 @@
     <!--Column 1 of 3-->
     <div class="column-1 side-menu">
         <div class="right-menu-logo">
-            <img src="{% static 'portfolioApp/images/logo_image.png'%}">
+            <a href="{% url 'portfolio:home' %}">
+                <img src="{% static 'portfolioApp/images/logo_image.png'%}">
+            </a>
         </div>
 
         <!--Main section for nav items-->
@@ -51,12 +54,12 @@
                 </a>
             </div>
             <div class="right-menu-nav-items-blog">
-                <a href="#">
+                <a href="{% url 'portfolio:blog' %}">
                     <img src="{% static 'portfolioApp/images/sidebar-nav/blog.png' %}" class="side-menu-icons">
                 </a>
             </div>
             <div class="right-menu-nav-items-contact">
-                <a href="#">
+                <a href="{% url 'portfolio:contactMe' %}">
                     <img src="{% static 'portfolioApp/images/sidebar-nav/contact.png' %}" class="side-menu-icons">
                 </a>
             </div>

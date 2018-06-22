@@ -1,0 +1,41 @@
+{% extends 'portfolioApp/base.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/contactMePage-styles.css' %}">
+{% endblock header %}
+
+{% block title %} Contact Me {% endblock title %}
+
+{% block body %}
+
+    <div class="formAndMap">
+        <div class="form">
+            <div class="headText">
+                <h1>Contact me</h1>
+                <p class="accentText">If you have any questions, please feel free to contact me using the form below</p>
+            </div>
+            <form method="post" action="" class="formInput">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="image" name="submit" src="{% static 'portfolioApp/images/icons/contact-me/send.png' %}" border="0" alt="Submit" class="submitIcon" onclick="setTimeout(clearInputFields, 0.5);">
+            </form>
+
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+
+        </div>
+    </div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh9Fih0YOMSb4fabdprXqYzlBU9fg0x1E&callback=initMap" type="text/javascript"></script>
+<script src="{% static 'portfolioApp/scripts/contactMe-placeholder-text.js' %}"></script>
+<script src="{% static 'portfolioApp/scripts/google-maps.js' %}"></script>
+{% endblock body %}
+
+{% block optionalRightMenu %}
+    <div id="map"></div>
+{% endblock optionalRightMenu %}

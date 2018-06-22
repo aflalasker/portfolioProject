@@ -65,7 +65,7 @@ body {
 }
 
 .column-3.optional-right-menu::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
 	background-color: #F5F5F5;
 }
 
@@ -97,7 +97,7 @@ p.skillTitle {
 }
 
 .column-2.main-content::-webkit-scrollbar {
-    width: 10px;
+    width: 3px;
 	background-color: #F5F5F5;
 }
 
