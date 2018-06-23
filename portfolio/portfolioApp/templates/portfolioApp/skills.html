@@ -36,17 +36,11 @@
 {% block optionalRightMenu %}
     <div class="language-display">
         {% for s in skill %}
-        <div class="html each-language">
+        <div class="each-language">
             <img src="{{ s.skillImage.url }}" class="skillImage">
             <p class="skillTitle">{{s.name}}</p>
         </div>
         {% endfor %}
 
-        {% for s in skill %}
-        <div class="html each-language">
-            <img src="{{ s.skillImage.url }}" class="skillImage">
-            <p class="skillTitle">{{s.name}}</p>
-        </div>
-        {% endfor %}
     </div>
 {% endblock optionalRightMenu %}

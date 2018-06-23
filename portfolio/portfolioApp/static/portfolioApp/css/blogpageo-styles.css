@@ -106,4 +106,9 @@ a.blogLink {
     padding-bottom: 10px;
 }
 
+.blogDescription:active {
+    transform: scale(1);
+}
+
+
 

@@ -109,6 +109,10 @@ div.column-2.main-content::-webkit-scrollbar-thumb {
 
 }
 
+.portfolioCoverImage:active {
+    transform: scale(1);
+}
+
 @media (max-width: 1750px) {
     .portfolioCoverImage {
         max-width: 420px;
