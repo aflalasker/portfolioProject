@@ -88,15 +88,19 @@ class ContactMe(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField()
     subject = models.CharField(max_length=150)
-    message = models.TextField(blank=True, null=True)
+    message = models.TextField(null=True)
     date_received = models.DateField(default=timezone.now)
 
     def __str__(self):
         return 'Name: {}, Date Received: {}'.format(self.name, self.date_received)
 
 
+class AboutMe(models.Model):
+    about_me = models.TextField()
+    date_updated = models.DateField(default=timezone.now)
 
-
+    def __str__(self):
+            return 'Updated on: {}'.format(self.date_updated)
 
 
 

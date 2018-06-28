@@ -1,0 +1,69 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+{% block header %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/index_mobile_page_styles.css' %}">
+{% endblock header %}
+
+{% block title %} Home {% endblock title %}
+
+{% block body %}
+    <div class="displayText">
+        <h1 class="name">
+            Hi, I'm Aflal Asker
+        </h1>
+        <h6 class="mainText">
+            Undergraduate Computer Science Student
+        </h6>
+        <h6 class="accentText">
+            At King's College London
+        </h6>
+    </div>
+    <div class="mini-bio">
+        <p class="bio-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore
+            magna aliqua. Id diam vel quam elementum pulvinar etiam non.
+            Commodo sed egestas egestas fringilla phasellus faucibus
+            scelerisque eleifend donec. Orci sagittis eu volutpat
+            odio facilisis mauris sit amet massa. Velit aliquet
+            sagittis id consectetur purus ut faucibus.
+            Neque egestas congue quisque egestas diam in arcu
+            cursus. In massa tempor nec feugiat nisl pretium fusce.
+            Nec ullamcorper sit amet risus nullam eget felis eget
+            nunc. Lectus quam id leo in vitae turpis massa sed.
+            Lacus sed turpis tincidunt id. Et odio pellentesque diam
+            volutpat. Quis vel eros donec ac odio tempor.
+            Est lorem ipsum dolor sit. Tortor at risus viverra
+            adipiscing at in. Tortor posuere ac ut consequat semper
+            viverra nam libero justo. Laoreet id donec ultrices
+            tincidunt.
+        </p>
+    </div>
+<div class="buttons">
+    <a href="{% url 'mobilePortfolioApp:mobilePortfolio' %}" class="btn text-center">View My Portfolio</a>
+    <a href="{% url 'mobilePortfolioApp:mobileContactMe' %}" class="btn text-center contactMeBtn">Contact Me</a>
+</div>
+
+<div class="profileImage">
+    <img src="{% static 'portfolioApp/images/personalPicture.png' %}" alt="" class="profilePicture img-thumbnail">
+</div>
+
+<div class="latestPost">
+    <h2>Read my Latest Posts</h2>
+    <div class="list-group">
+        {% for b in top_three_blog %}
+            <a href="{% url 'mobilePortfolioApp:mobileIndividualBlog' id=b.id %}" class="list-group-item list-group-item-action flex-column align-items-start" id="posts">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{ b.blogTopic }}</h5>
+                <small class="datePosted">Posted on: {{b.dateCreated|date:"d/m/Y"}}</small>
+            </div>
+        <p class="mb-1">{{b.description|truncatewords:20}}</p>
+        <small class="readMore">Click to read more</small>
+                <hr>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

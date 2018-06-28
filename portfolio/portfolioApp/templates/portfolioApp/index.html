@@ -2,6 +2,16 @@
 {% load static %}
 
 {% block header %}
+    <script type="text/javascript">
+        function isMobileDevice() {
+            return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
+
+        if( isMobileDevice() ) {
+            window.location = "{% url 'mobilePortfolioApp:mobileHome' %}";
+        }
+    </script>
+
     <link rel="stylesheet" href="{% static 'portfolioApp/css/homepage-styles.css' %}">
 {% endblock header %}
 
@@ -9,10 +19,12 @@
     Home
 {% endblock title %}
 {% block body %}
+
     <div class="head-text">
         {% for user in user %}
             <h1 class="large-text">Hi, <br> I'm {{user.first_name }}, <br> Computer Science Student</h1>
             <h1 class="accent-text">AT KING'S COLLEGE LONDON </h1>
         {% endfor %}
     </div>
+
 {% endblock body %}

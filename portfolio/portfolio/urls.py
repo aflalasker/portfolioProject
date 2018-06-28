@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('portfolioApp.urls', namespace='portfolio')),
+    path('', include('portfolioApp.urls', namespace='mobilePortfolioApp')),
 ]
 
 

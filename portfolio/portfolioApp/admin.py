@@ -1,6 +1,7 @@
 from django.contrib import admin
+from django.contrib.auth.admin import Group
 from django.contrib.auth.admin import UserAdmin
-from .models import User, ProjectHeader, ProjectDetails, Testimonials, Experience, Qualification, Skill, Blog, ContactMe
+from .models import User, ProjectHeader, ProjectDetails, Testimonials, Experience, Qualification, Skill, Blog, ContactMe, AboutMe
 
 # Register your models here.
 admin.site.register(User, UserAdmin)
@@ -12,4 +13,6 @@ admin.site.register(Qualification)
 admin.site.register(Skill)
 admin.site.register(Blog)
 admin.site.register(ContactMe)
+admin.site.register(AboutMe)
+admin.site.unregister(Group)
 

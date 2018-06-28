@@ -1,0 +1,35 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/skills_and_experiences_mobile_styles.css' %}">
+{% endblock header %}
+
+{% block title %} Skills and Experiences {% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+   <div class="headText">
+       <h1>Skills and Experiences</h1>
+   </div>
+    <div class="experiences">
+        <div class="bodyText">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Dignissim suspendisse in est ante in nibh mauris cursus
+                mattis. Adipiscing bibendum est ultricies integer quis auctor. Diam quam nulla porttitor massa id
+                neque aliquam vestibulum. Consequat interdum varius sit amet mattis vulputate enim nulla aliquet.
+                Rhoncus mattis rhoncus urna neque viverra justo nec. Purus non enim praesent elementum facilisis leo
+                vel fringilla est. Pharetra convallis posuere morbi leo. Non tellus orci ac auctor augue mauris.
+                Sit amet commodo nulla facilisi nullam vehicula ipsum.</p>
+        </div>
+    </div>
+    <div class="skills">
+        {% for s in skills %}
+        <div class="skill">
+            <img src="{{ s.skillImage.url }}" class="mx-auto d-block" alt="">
+            <h4>{{ s.name }}</h4>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

@@ -1,0 +1,79 @@
+div.headText {
+    margin-bottom: 2rem;
+}
+
+.headText > h1 {
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+div.posts {
+    background-color: #f2f2f2;
+    /*padding-top: 1.5rem;*/
+    /*padding-bottom: 1.5rem;*/
+    padding-top: 0.1rem;
+}
+
+div.post {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+
+.subHeaderText > h4 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.subHeaderText > p.postedDate {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+    display: contents;
+}
+
+
+div.bodyText {
+    text-align: left;
+    line-height: 29px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.46);
+}
+
+p.author {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+a.btn {
+    width: 100%;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.btn:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}

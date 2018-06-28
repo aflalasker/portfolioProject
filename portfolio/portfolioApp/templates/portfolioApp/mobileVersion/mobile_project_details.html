@@ -1,0 +1,26 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/project_details_mobile.css' %}">
+{% endblock header %}
+
+{% block title %} Project Details {% endblock title %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="headText">
+            <h1>{{ pd.title }}</h1>
+        </div>
+        <div class="projectDetails">
+            <div class="card">
+              <img class="card-img-top" src="{{ pd.coverImage.url }}" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text">{{ pd.description }}</p>
+                  <a href="{{ pd.projectDetails.websiteLink }}" class="btn">Link to Website</a>
+                  <a href="{{ pd.projectDetails.projectLink }}" class="btn projectButton">Link to Project</a>
+              </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}

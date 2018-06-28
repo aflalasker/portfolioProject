@@ -1,0 +1,29 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/qualification_mobile_styles.css' %}">
+{% endblock header %}
+
+{% block title %} Qualifications {% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="headText">
+            <h1>Work-Experience</h1>
+        </div>
+    {% for q in qualification %}
+        <div class="qualification">
+            <div class="subHeaderText">
+                <h1>{{ q.institution }}</h1>
+                <p>Graduated Date: {{ q.graduatedDate|date:"d/m/Y" }}</p>
+                <p>Overall Grade: {{ q.overallGradesAndLevel }}</p>
+            </div>
+            <div class="bodyText">
+                <p>{{ q.subjects }}</p>
+            </div>
+        </div>
+    <hr>
+    {% endfor %}
+</div>
+{% endblock body %}

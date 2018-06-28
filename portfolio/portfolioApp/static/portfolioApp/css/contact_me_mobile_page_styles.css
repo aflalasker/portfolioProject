@@ -1,0 +1,79 @@
+label {
+    display: none;
+}
+
+div.headText {
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+div.contactMe {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+input[name='name'], input[name='email'], input[name='subject'], textarea[name='message'] {
+    border-color: grey;
+}
+
+#id_message {
+    resize: none;
+}
+
+input[name='submit'] {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f2f2f2;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+
+li.success {
+    list-style: none;
+    color: green;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+ul.messages {
+    padding-left: 0;
+    margin-top: 1rem;
+}
+
+.headText > h1 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.headText > p {
+    font-size: 14px;
+    color: gray;
+    text-shadow: 1px 1px #f2f2f2;
+    font-weight: 600;
+    font-style: italic;
+    line-height: 25px;
+}
+
+ul.errorlist {
+    padding-left: 0;
+}
+
+.errorlist > li {
+    list-style: none;
+    color: red;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+}

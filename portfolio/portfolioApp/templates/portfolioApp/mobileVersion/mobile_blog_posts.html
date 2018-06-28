@@ -1,0 +1,34 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'portfolioApp/css/blog_posts_mobile_styles.css' %}">
+{% endblock header %}
+
+{% block title %} Posts {% endblock title %}
+
+{% block body %}
+<div class="container-fluid">
+    <div class="headText">
+        <h1>Read My Blog Posts</h1>
+    </div>
+    <div class="posts">
+        {% for p in mobile_blog %}
+        <div class="post">
+            <div class="subHeaderText">
+                <h4>{{ p.blogTopic }}</h4>
+                <p class="postedDate">Posted On: {{ p.dateCreated|date:"d/m/Y" }}</p><br>
+                <p class="author">Created By: {{ p.author }}</p>
+            </div>
+            <div class="bodyText">
+                <p>{{ p.description|truncatewords:30 }}</p>
+            </div>
+            <div class="footerButton">
+                <a href="{% url 'mobilePortfolioApp:mobileIndividualBlog' id=p.id %}" class="btn">Read More</a>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}

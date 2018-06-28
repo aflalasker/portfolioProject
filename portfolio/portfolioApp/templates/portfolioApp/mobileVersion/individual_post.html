@@ -1,0 +1,22 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'portfolioApp/css/individual_post_page_mobile.css' %}">
+{% endblock header %}
+
+{% block title %} Post {% endblock title %}
+
+{% block body %}
+<div class="headText">
+    <h1>{{ post.blogTopic }}</h1>
+</div>
+<div class="bodyText">
+    <p>{{ post.description }}</p>
+</div>
+<div class ="footerText">
+    <p>Posted on: {{ post.dateCreated|date:"d/m/Y" }} by {{ post.author }}</p>
+</div>
+{% endblock body %}
+

@@ -1,0 +1,54 @@
+html, body {
+    font-family: "Open Sans", sans-serif;
+}
+
+div.headText {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.headText > h1 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+div.card {
+    border: none;
+}
+
+img.card-img-top {
+    border-radius: 0;
+}
+
+div.card-body {
+    background-color: #F2F2F2;
+    padding-bottom: 2rem;
+}
+
+p.card-text {
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    margin-bottom: 2rem;
+}
+
+a.btn {
+    width: 45%;
+    background-color: white;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+a.btn.projectButton {
+    float: right;
+}
+
+.btn:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}

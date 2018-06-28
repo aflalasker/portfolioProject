@@ -1,0 +1,58 @@
+div.headText {
+    margin-bottom: 2rem;
+}
+
+.headText > h1 {
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+div.experiences {
+    background-color: #f2f2f2;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.subHeaderText > h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.subHeaderText > p {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    float: left;
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#position {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+    float: left;
+    margin-bottom: 1rem;
+}
+
+div.bodyText {
+    text-align: left;
+    line-height: 29px;
+    font-size: 15px;
+    display: inline-block;
+}
+
+.current {
+    margin-left: 2rem;
+}
+
+hr {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    border: 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.46);
+}

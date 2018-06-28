@@ -1,0 +1,27 @@
+{% extends 'portfolioApp/mobileVersion/base_mobile.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'portfolioApp/css/portfolio_mobile_styles.css' %}">
+{% endblock header %}
+
+{% block title %} My Portfolio {% endblock title %}
+
+{% block body %}
+    <div class="container-fuild">
+        <div class="headText">
+            <h1>My Portfolio</h1>
+            <p>See what I have done</p>
+        </div>
+        <div class="projects">
+            {% for project in portfolio %}
+            <div class="card">
+              <img class="card-img-top" src="{{ project.coverImage.url }}" alt="Project Cover Image">
+              <div class="card-body">
+                <a href="{% url 'mobilePortfolioApp:mobileProjectDetails' id=project.id %}" class="btn">{{ project.title }}</a>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock body %}
